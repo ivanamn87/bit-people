@@ -21,9 +21,10 @@ export const HomePage = () => {
     setGridView(!gridView);
   };
 
+
   return (
     <>
-      <Header isGridView={gridView} viewButtonHandler={gridViewHandler} />
+      <Header isGridView={gridView} viewButtonHandler={gridViewHandler} refreshBtnHandler={loadBitPeople}/>
       <DisplayUsers isGridView={gridView} bitPeopleList={bitPeopleList} />
       <Footer />
     </>

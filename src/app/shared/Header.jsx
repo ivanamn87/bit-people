@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosRefresh } from "react-icons/io";
 
-const Header = ({ viewButtonHandler, isGridView }) => {
+const Header = ({ viewButtonHandler, isGridView, refreshBtnHandler}) => {
 
   function refresh() {
     
@@ -14,15 +14,8 @@ const Header = ({ viewButtonHandler, isGridView }) => {
       <div className="container d-flex justify-content-between px-3">
         <h3 className="text-white">BitPeople</h3>
         <div>
-          <button className="btn bg-danger text-light">
-            < IoIosRefresh />
-          </button>
-          <button
-            onClick={viewButtonHandler}
-            type="button"
-            className="btn text-danger bg-light"
-          >
-            {isGridView ? "List View" : "Grid View"}
+          <button onClick={refreshBtnHandler} type="button" className="btn bg-danger text-light">
+          < IoIosRefresh />
           </button>
         </div>
       </div>
