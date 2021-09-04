@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { Header } from "./shared/Header";
+import Header from "./shared/Header";
 import { DisplayUsers } from "./HomePage/DisplayUsers";
-import { Footer } from "./shared/Header";
-
+import Footer from "./shared/Header";
 import { getBitPeople } from "../services/bitPeopleService";
 
 const App = () => {
