@@ -15,7 +15,7 @@ export const ListItem = (props) => {
         </div>
         <div className="ps-3">
           <p className="m-0">
-            {props.person.name.first} {/*props.peerson.name.last*/}
+            {props.person.name.first} {props.person.name.last}
           </p>
           <p className="m-0">
             <HiOutlineMail />
