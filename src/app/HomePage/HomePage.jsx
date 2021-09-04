@@ -7,6 +7,7 @@ import { getBitPeople } from "../../services/bitPeopleService";
 export const HomePage = () => {
   const [bitPeopleList, setBitPeopleList] = useState([]);
   const [gridView, setGridView] = useState(false);
+  
   useEffect(() => {
     loadBitPeople();
   }, []);
