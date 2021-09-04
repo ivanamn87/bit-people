@@ -6,7 +6,7 @@ const Header = ({viewButtonHandler, isGridView}) => {
       <div className="container d-flex justify-content-between px-3">
         <h3 className="text-white">BitPeople</h3>
         <div>
-          <button onClick={props.viewButtonHandler} type="button" className="btn text-danger bg-light">
+          <button onClick={viewButtonHandler} type="button" className="btn text-danger bg-light">
             {isGridView ? "List View" : "Grid View"}
           </button>
         </div>

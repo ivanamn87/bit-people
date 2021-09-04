@@ -4,3 +4,7 @@ export const hideMail = (mail) => {
     const part2 = splited[1];
     return part1 + '...@' + part2;
 }
+
+export const formatDate = (date) => {
+    return (new Date(date)).toLocaleDateString('en-GB').replaceAll('/', '.');
+  }

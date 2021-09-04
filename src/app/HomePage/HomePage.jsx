@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "react-bootstrap/lib/Modal";
-import Footer from "react-bootstrap/lib/Modal";
+import Header from "../shared/Header";
+import Footer from "../shared/Footer";
 import { DisplayUsers } from "./DisplayUsers";
 import { getBitPeople } from "../../services/bitPeopleService";
 

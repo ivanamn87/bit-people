@@ -19,7 +19,7 @@ export const ListItem = (props) => {
           </p>
           <p className="m-0">
             <HiOutlineMail />
-            email: {props.person.email}
+            email: {hideMail(props.person.email)}
           </p>
           <p className="m-0">
             <FaBirthdayCake />
