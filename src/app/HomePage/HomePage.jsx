@@ -4,10 +4,19 @@ import Footer from "../shared/Footer";
 import { DisplayUsers } from "./DisplayUsers";
 import { getBitPeople } from "../../services/bitPeopleService";
 
+// setting gridView state to localStorage: 1. first we try to get state from localStorage
+const viewFromLocalStorage = JSON.parse(localStorage.getItem("gridView"));
+
 export const HomePage = () => {
   const [bitPeopleList, setBitPeopleList] = useState([]);
-  const [gridView, setGridView] = useState(false);
+  // setting gridView state to localStorage: 2. then we useState with localStorage initial value
+  const [gridView, setGridView] = useState(viewFromLocalStorage);
   
+  // setting gridView state to localStorage: 3. finally we use UseEffect to set state in localStorage
+  useEffect(() => {
+    localStorage.setItem("gridView", JSON.stringify(gridView));
+  }, [gridView]);
+
   useEffect(() => {
     loadBitPeople();
   }, []);
@@ -22,10 +31,9 @@ export const HomePage = () => {
     setGridView(!gridView);
   };
 
-
   return (
     <>
-      <Header isGridView={gridView} viewButtonHandler={gridViewHandler} refreshBtnHandler={loadBitPeople}/>
+      <Header isGridView={gridView} viewButtonHandler={gridViewHandler} refreshBtnHandler={loadBitPeople} />
       <DisplayUsers isGridView={gridView} bitPeopleList={bitPeopleList} />
       <Footer />
     </>
